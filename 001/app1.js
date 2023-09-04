@@ -1,0 +1,14 @@
+let shoppingList = ['peas','bananas','apples'];
+console.log(shoppingList);
+shoppingList[0] = "beans";
+console.log(shoppingList);
+shoppingList[shoppingList.length] = "potatoes";
+console.log(shoppingList);
+shoppingList.push("tomatoes");
+console.log(shoppingList);
+shoppingList.pop();
+console.log(shoppingList);
+shoppingList.shift();
+console.log(shoppingList);
+shoppingList.unshift("beans");
+console.log(shoppingList);
