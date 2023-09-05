@@ -20,7 +20,7 @@ createAutoComplete({
     root: document.querySelector(".autoTwo"),
 });
 createAutoComplete({
-    root: document.querySelector(".r5555555555555555555555autoThree"),
+    root: document.querySelector(".autoThree"),
 });
 
 const onMovieSelect = async movie => {
