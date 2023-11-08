@@ -1,7 +1,7 @@
-const { validationResult } = require("express-validator");
+const { validationResult } = require('express-validator');
 
 module.exports = {
-  handleErrors(temmplateFunc, dataCb) {
+  handleErrors(templateFunc, dataCb) {
     return async (req, res, next) => {
       const errors = validationResult(req);
 
@@ -10,7 +10,8 @@ module.exports = {
         if (dataCb) {
           data = await dataCb(req);
         }
-        return res.send(temmplateFunc({ errors, ...data }));
+
+        return res.send(templateFunc({ errors, ...data }));
       }
 
       next();
@@ -18,9 +19,9 @@ module.exports = {
   },
   requireAuth(req, res, next) {
     if (!req.session.userId) {
-      return res.redirect("/signin");
+      return res.redirect('/signin');
     }
 
     next();
-  },
+  }
 };
